@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="重学线性代数！！！ 时间：2020-11-2–2020-11-16 分为三部分：详细概述、简述、原书">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性代数_同济大学">
+<meta property="og:url" content="http://example.com/2020/11/02/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0_%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6/index.html">
+<meta property="og:site_name" content="flyinghippo">
+<meta property="og:description" content="重学线性代数！！！ 时间：2020-11-2–2020-11-16 分为三部分：详细概述、简述、原书">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-14T02:46:32.751Z">
+<meta property="article:author" content="hippo">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2020/11/02/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0_%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>线性代数_同济大学 | flyinghippo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">flyinghippo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/02/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0_%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hippo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="flyinghippo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          线性代数_同济大学
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-02 00:00:00" itemprop="dateCreated datePublished" datetime="2020-11-02T00:00:00+08:00">2020-11-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-14 10:46:32" itemprop="dateModified" datetime="2020-11-14T10:46:32+08:00">2020-11-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>重学线性代数！！！</p>
+<p>时间：2020-11-2–2020-11-16</p>
+<p>分为三部分：详细概述、简述、原书</p>
+<a id="more"></a>
+
+<h1 id="详细概述"><a href="#详细概述" class="headerlink" title="详细概述"></a>详细概述</h1><h1 id="1-行列式"><a href="#1-行列式" class="headerlink" title="1 行列式"></a>1 行列式</h1><h2 id="1-1-二阶与三阶行列式"><a href="#1-1-二阶与三阶行列式" class="headerlink" title="1.1 二阶与三阶行列式"></a>1.1 二阶与三阶行列式</h2><ul>
+<li>行列式是一个数，它是一个数表通过相应的运算结果得出来的数</li>
+<li>行列式是多个数之和，每一项都是不同行不同列的元素的乘积，其符号在二、三阶行列式的时候遵循对角线法则</li>
+<li>对角线法则：^平行于主对角线的项是正号^，平行于副对角线的项是负号</li>
+<li>对角线法则只适用于二阶与三阶行列式</li>
+</ul>
+<h2 id="1-2-全排列和对换"><a href="#1-2-全排列和对换" class="headerlink" title="1.2 全排列和对换"></a>1.2 全排列和对换</h2><ul>
+<li><p>把n 个不同的元素排成一列，叫做这n 个元素的全排列（也简称排列）.</p>
+</li>
+<li><p>对于这n个不同的元素可以先规定一个标准次序，然后再任一排列中，只要某一对元素与标准次序中的先后次序不同，就称为一个逆序。一个排序中的所有逆序的总数叫做这个排序的逆序数。</p>
+</li>
+<li><p>逆序数为奇数的排列叫做奇排列，逆序数为偶数的排列叫做偶排列.</p>
+</li>
+<li><p>计算逆序数的时候可以从前到后挨个元素判断，判断该项与之前所有项的前后次序，所有不符合条件的项的个数，称为该元素的逆序数。全体元素的逆序数之和即是这个排列的逆序数。</p>
+</li>
+<li><p>对换：任意两个元素换位置。相邻元素调换叫相邻对换。</p>
+</li>
+<li><p>定理1：一个排列中的任意两个元素对换，排列改变奇偶性.</p>
+</li>
+<li><p>推论：奇排列对换成标准排列的对换次数为奇数，偶排列对换成标准排列的对换次数<br>为偶数.</p>
+</li>
+</ul>
+<h2 id="1-3-n-阶行列式的定义"><a href="#1-3-n-阶行列式的定义" class="headerlink" title="1.3 n 阶行列式的定义"></a>1.3 n 阶行列式的定义</h2><ul>
+<li>定义：设有n^2^ 个数，排成n行n列的数表，表中位于不同行不同列的n个数的乘积，并冠以符号（-1）^t^，得到形如（-1）^t^a<del>1p1</del>a<del>2p2</del> … a<del>npn</del> 的项，其中p1p2…pn 为自然数1 ，2，…，n 的一个排列，t 为这个排列的逆序数.由于这样的排列共有n！ 个，所有这n！ 项的代数和称为n 阶行列式</li>
+<li>简记作det（aij），其中数aij为行列式D 的（i，j）元.</li>
+<li>主对角线以下（上）的元素都为0 的行列式叫做上（下）三角形行列式</li>
+<li>主对角线以下和以上的元素都为0 的行列式叫做对角行列式。</li>
+<li>三角行列式和对角行列式的值为对角线上所有数的乘积。</li>
+</ul>
+<h2 id="1-4-行列式的性质"><a href="#1-4-行列式的性质" class="headerlink" title="1.4 行列式的性质"></a>1.4 行列式的性质</h2><ul>
+<li><p>性质1：行列式与它的转置行列式相等。所以得出行列式中行和列地位相等。</p>
+</li>
+<li><p>性质2：对换行列式的两行（列），行列式变号。</p>
+</li>
+<li><p>性质2推论：如果行列式有两行（列）完全相同，则此行列式等于零.</p>
+</li>
+<li><p>性质3：行列式的某一行（列）中所有的元素都乘同一数k，等于用数k 乘此行列式.</p>
+</li>
+<li><p>性质3推论：行列式中某一行（列）的所有元素的公因子可以提到行列式记号的外面.</p>
+</li>
+<li><p>性质4：行列式中如果有两行（列）元素成比例，则此行列式等于零.</p>
+</li>
+<li><p>性质5：若行列式的某一行（列）的元素都是两数之和，则可以按照这一行依次拆开，拆成两个行列式之和。若n 阶行列式每个元素都表示成两数之和，则它可分解成2^n^ 个行列式.</p>
+</li>
+<li><p>性质6：把行列式的某一行（列）的各元素乘同一数然后加到另一行（列）对应的元素上去，行列式不变.</p>
+</li>
+<li><p>关于副对角线构成上（下）三角形行列式，其可以按照行对换换成相应的三角行列式，其最终结果为：</p>
+<p>D = （-1）^n(n-1)/2^a<del>1n</del>a<del>2,n-1</del>···a<del>n1</del>    # 副对角线上个项乘积，正负号由n确定</p>
+</li>
+<li><p>计算行列式时以下几种方法：</p>
+<ol>
+<li>一般要把第一行的第一个数换成1，这样方便计算</li>
+<li>如果各行或者各列的值和相同，可以考虑把其都加到第一行（列），这样可以提出公因式。</li>
+<li>计算是注意顺序，一旦某行或者列值改变了就不能用以前的值了</li>
+<li>注意性质6的描述顺序，是哪一项乘同一数然后加到哪一项上</li>
+<li>用归纳法不难证明：任何n 阶行列式总能利用运算化为上三角形行列式，或化为下三角形行列式。类似地，利用列运算也可把行列式化为上三角形行列式或下三角形行列式.</li>
+<li>如果行列式可以整个分块，右上角或左下角全部为0，也就是说整体可以化成上（下）三角行列式，这时其等于对角线行列式乘积。</li>
+<li>有些行列式可以找其递归规律求得最后结果。</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-5-行列式按行（列）展开"><a href="#1-5-行列式按行（列）展开" class="headerlink" title="1.5 行列式按行（列）展开"></a>1.5 行列式按行（列）展开</h2><ul>
+<li>在n 阶行列式中，把（i，j）元所在的第i行和第j 列划去后，留下来的n-1阶行列式叫做（i，j）元aij的余子式，记作Mi</li>
+<li>A<del>ij</del> =（-1）^i+j^ M<del>ij</del> ，A<del>ij</del>叫做（i，j）元a<del>ij</del>的代数余子式.</li>
+<li>引理：一个n 阶行列式，如果其中第i行所有元素除（i，j）元a<del>ij</del>外都为零，那么这行列式等于a<del>ij</del>与它的代数余子式的乘积，即：D = a<del>ij</del> A <del>ij</del>.</li>
+<li>定理2：行列式等于它的任一行（列）的各元素与其对应的代数余子式乘积之和。该定理叫做行列式按行（列）展开法则。</li>
+<li>范德蒙德行列式，其可以根据相应的递推公式求得。</li>
+<li>定理2推论：行列式某一行（列）的元素与另一行（列）的对应元素的代数余子式乘积之和等于零。</li>
+</ul>
+<h1 id="2-矩阵及其运算"><a href="#2-矩阵及其运算" class="headerlink" title="2 矩阵及其运算"></a>2 矩阵及其运算</h1><h2 id="2-1-线性方程组和矩阵"><a href="#2-1-线性方程组和矩阵" class="headerlink" title="2.1 线性方程组和矩阵"></a>2.1 线性方程组和矩阵</h2><ul>
+<li>有n个未知数m个方程的线性方程组，如果常数项不全为零，叫做n元非齐次线性方程组，否则叫做n 元齐次线性方程组.</li>
+<li>矩阵定义：由m×n个数<del>aij</del> （i= 1，2，…，m；j= 1，2，…，n）排成的m行n列的数表称为m 行n 列矩阵，简称m×n 矩阵。</li>
+<li>行数与列数都等于n 的矩阵称为n 阶矩阵或n 阶方阵.</li>
+<li>只有一行的矩阵称为行矩阵，又称行向量。只有一列的矩阵，称为列矩阵，又称列向量。</li>
+<li>两个矩阵的行数相等、列数也相等时，就称它们是同型矩阵。</li>
+<li>如果<strong>A</strong> =（aij）与<strong>B</strong> =（bij）是同型矩阵，并且它们的对应元素相等，那么就称矩阵A 与矩阵B 相等。</li>
+<li>元素都是零的矩阵称为零矩阵，记作<strong>O</strong>. 注意不同型的零矩阵是不同的.</li>
+<li>从左上角到右下角的直线（叫做对角线）以外的元素都是0.这种方阵称为对角矩阵，简称对角阵.A = diag（ λ1，λ2，…，λn）</li>
+<li>当λ1 =λ2 =… =λn = 1 时的线性变换叫做恒等变换，它对应的n 阶方阵叫做n 阶单位矩阵，简称单位阵E.</li>
+</ul>
+<h2 id="2-2-矩阵的运算"><a href="#2-2-矩阵的运算" class="headerlink" title="2.2 矩阵的运算"></a>2.2 矩阵的运算</h2><ol>
+<li><p>矩阵的加法：</p>
+<ol>
+<li>对应各项相加</li>
+<li>只有当两个矩阵是同型矩阵时，这两个矩阵才能进行加法运算.</li>
+<li>满足下列运算规律：<ol>
+<li>A + B = B +A；</li>
+<li>（A +B）+ C = A +（B + C）.</li>
+</ol>
+</li>
+<li>-A 称为矩阵A 的负矩阵</li>
+</ol>
+</li>
+<li><p>数与矩阵相乘：</p>
+<ol>
+<li>数λ与矩阵A 的乘积记作λA 或Aλ，全部项都乘λ</li>
+<li>λA =Aλ</li>
+<li>数乘矩阵满足下列运算规律（设A、B 为m×n 矩阵，λ、μ为数）：<br>（i） （λμ）A =λ（μA）；<br>（ii） （λ+μ）A =λA +μA ；<br>（iii） λ（A + B）=λA +λB.</li>
+</ol>
+</li>
+<li><p>矩阵与矩阵相乘：</p>
+<ol>
+<li><p>乘积矩阵A B = C 的（i，j）元cij就是A 的第i行与B 的第j 列的乘积.</p>
+</li>
+<li><p>只有当第一个矩阵（左矩阵）的列数等于第二个矩阵（右矩阵）的行数时，两个矩阵才能相乘.</p>
+</li>
+<li><p>在矩阵的乘法中必须注意矩阵相乘的顺序。矩阵的乘法不满足交换律，即在一般情形下，A B ≠B A</p>
+</li>
+<li><p>对于两个n 阶方阵A、B，若AB = BA，则称方阵A与B是可交换的.</p>
+</li>
+<li><p>若有两个矩阵A、B 满足AB = O，不能得出A = O 或B = O 的结论；</p>
+</li>
+<li><p>若A ≠ O 而A（X - Y）= O，也不能得出X = Y 的结论.</p>
+</li>
+<li><p>矩阵的乘法虽不满足交换律，但仍满足下列结合律和分配律：</p>
+<p>（i） （A B）C = A（B C）；<br>（ii） λ（A B）= （λA）B = A（λB） （其中λ为数）；<br>（iii） A（B + C）= A B +A C， （B + C）A = B A + C A.</p>
+</li>
+<li><p>EA = AE = A .</p>
+</li>
+<li><p>纯量阵λE 与任何同阶方阵都是可交换的.</p>
+</li>
+<li><p>矩阵乘法一般不满足交换律，所以对于两个n 阶矩阵A与B，一般说来（AB）^k^≠A^k^ B^k^，只有当A 与B 可交换时，才有（AB）^k^=A^k^ B^k^</p>
+</li>
+</ol>
+</li>
+<li><p>矩阵的转置:</p>
+<ol>
+<li><p>把矩阵A 的行换成同序数的列得到一个新矩阵，叫做A 的转置矩阵，记作A^T^.</p>
+</li>
+<li><p>矩阵的转置也是一种运算，满足下述运算规律:</p>
+<p>（1） （A^T^）^T^= A；<br>（ii） （A + B）^T^ = A^T^ + B ^T^ ；<br>（iii） （λA）^T^ =λA^T^；<br>（iv） （ A B）^T^= B ^T^ A ^T^.</p>
+</li>
+<li><p>设A 为n 阶方阵，如果满足A^T^=A，那么A 称为对称矩阵，简称对称阵。对称矩阵的特点是：它的元素以对角线为对称轴对应相等。</p>
+</li>
+</ol>
+</li>
+<li><p>方阵的行列式：</p>
+<ol>
+<li><p>由n 阶方阵A 的元素所构成的行列式（各元素的位置不变），称为方阵A 的行列式，记作det A 或|A|.</p>
+</li>
+<li><p>方阵是个数表，行列式是数表中的数通过运算法则得出来的数</p>
+</li>
+<li><p>由A 确定|A|的这个运算满足下述运算规律（设A、B 为n 阶方阵，λ为数）：</p>
+<p>（i）|A ^T^|=|A|；<br>（ii）|λA|=λ^n^ |A|；<br>（iii） |A B|=|A||B|.</p>
+</li>
+<li><p>对于n 阶矩阵A、B，一般来说AB≠BA，但总有|AB|=|BA|=|A||B|.</p>
+</li>
+<li><p>行列式|A|的各个元素的代数余子式Aij所构成了一个矩阵，称为矩阵A 的伴随矩阵，简称伴随阵.</p>
+</li>
+<li><p>注意伴随阵的行列的序列号，这是为了保证最终对应的项可以相乘。</p>
+</li>
+<li><p>A A * = A * A =|A|E.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-3-逆矩阵"><a href="#2-3-逆矩阵" class="headerlink" title="2.3 逆矩阵"></a>2.3 逆矩阵</h2><ol>
+<li>定义：对于n 阶矩阵A，如果有一个n 阶矩阵B，使AB = BA = E，则说矩阵A 是可逆的，并把矩阵B 称为A 的逆矩阵，简称逆阵.</li>
+</ol>
+<ul>
+<li>矩阵与其逆矩阵是可交换的。</li>
+<li>如果矩阵A 是可逆的，那么A 的逆矩阵是惟一的.</li>
+<li>A 的逆矩阵记作A^-1^. 即若A B = B A = E，则B =A^-1^.</li>
+</ul>
+<ol start="2">
+<li><p>一些定理：</p>
+<ol>
+<li><p>定理1：若矩阵A 可逆，则|A|≠0.</p>
+</li>
+<li><p>定理2：若|A|≠0，则矩阵A 可逆，且A^-1^=1/|A|*A^<em>^其中A^</em>^为矩阵A 的伴随矩阵.当|A|=0 时，A 称为奇异矩阵，否则称非奇异矩阵.</p>
+</li>
+<li><p>由上面两定理可知：A是可逆矩阵的充分必要条件是|A|≠0，即可逆矩阵就是非奇异矩阵.</p>
+</li>
+<li><p>推论：若A B = E （或B A = E），则B =A^-1^.</p>
+</li>
+<li><p>逆矩阵满足下述运算规律：</p>
+<p>（i）若A 可逆，则A^-1^亦可逆，且（A^-1^）^-1^ = A；<br>（ii）若A 可逆，数λ≠0，则λA 可逆，且（λA）^-1^= 1/λ*A^-1^<br>（iii） 若A、B 为同阶矩阵且均可逆，则A B 亦可逆，且（A B）^-1^ = B^-1^ A ^-1^.<br>（iv） 若A 可逆，则A^T^ 亦可逆，且（A^T^ ）^-1^ =（A ^-1^）^T^  .</p>
+</li>
+<li><p>当A 可逆时，还可定义A^0^ = E， A^-k^ =（A ^-1^）^k^</p>
+</li>
+<li><p>求逆矩阵的步骤：1计算|A|是否为零，判断逆矩阵是否存在 2.计算余子式 3. 计算代数余子式 4.代数余子式转置 5. A^-1^=A^*^/|A|</p>
+</li>
+</ol>
+</li>
+<li><p>A的多项式</p>
+<p>计算A 的多项式φ（A）：</p>
+<p>（i） 如果A = PΛP^-1^，则A^k^ = PΛ^k^ P^-1^，从而φ（A）= a<del>0</del>E +a<del>1</del>A +…+a <del>m</del>A ^m^= P φ（Λ）P ^-1^.<br>（ii） 如果Λ= diag（λ1，λ2，…，λn）为对角矩阵，则Λ^k^= diag（λ<del>1</del>^k^，λ<del>2</del>^k^，…，λ<del>n</del>^k^）.当Λ= diag（λ1，λ2，…，λn）为n 阶对角矩阵时，φ（Λ）也是n 阶对角矩阵，且它的第i个对角元为φ（λi），归结为数的多项式计算（i= 1， 2，…，n）</p>
+</li>
+</ol>
+<h2 id="2-4-克拉默法则"><a href="#2-4-克拉默法则" class="headerlink" title="2.4 克拉默法则"></a>2.4 克拉默法则</h2><ul>
+<li><p>克拉默法则:</p>
+<p>如果线性方程组的系数矩阵A 的行列式不等于零，那么，方程组有惟一解。（具体形式看书）</p>
+</li>
+<li><p>也可以用逆矩阵的形式来做</p>
+</li>
+</ul>
+<h2 id="2-5-矩阵分块法"><a href="#2-5-矩阵分块法" class="headerlink" title="2.5 矩阵分块法"></a>2.5 矩阵分块法</h2><ul>
+<li><p>运算规则</p>
+<ul>
+<li>加法：对应块直接相加</li>
+<li>λ数乘：每个块都乘λ</li>
+<li>矩阵乘法：与未分块类似</li>
+<li>转置：整体大转置，内部小转置</li>
+<li>设A 为n 阶方阵，若A 的分块矩阵只有在对角线上有非零子块，其余子块都为零矩阵，且在对角线上的子块都是方阵，那么称A 为分块对角矩阵。</li>
+<li>分块矩阵性质：<ul>
+<li>|A| = |A1||A2|·····|As|</li>
+<li>由上条性质可知，若|Ai|≠0 （i= 1，2，…，s），则|A|≠0，则A^-1^为矩阵内各项分别求逆，然后位置不变（具体看书）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>矩阵A = O 的充分必要条件是方阵A^T^A = O .</p>
+</li>
+<li><p>以下命题是错的：</p>
+<p>（1） 若A^2^ = O，则A = O；</p>
+<p>（2） 若A^2^= A，则A = O 或A = E；</p>
+<p>（3） 若AX= AY，且A≠O ，则X=Y；</p>
+</li>
+<li><p>设A，B 为n 阶矩阵，且A 为对称矩阵，B ^T^ A B 也是对称矩阵</p>
+</li>
+<li><p>A，B 都是n 阶对称矩阵，A B 是对称矩阵的充分必要条件是A B = B A .</p>
+</li>
+<li><p>设矩阵A 可逆，其伴随矩阵A *也可逆，且（A * ） ^-1^ =（A ^-1^） *.</p>
+</li>
+<li><p>设n 阶矩阵A 及s 阶矩阵B 都可逆 $\begin{bmatrix}O &amp; A \ B &amp; O\ \end{bmatrix}$^-1^=$\begin{bmatrix}O &amp; B^{-1} \ A^{-1} &amp; O\ \end{bmatrix}$</p>
+</li>
+</ul>
+<h1 id="3-矩阵的初等变换与线性方程组"><a href="#3-矩阵的初等变换与线性方程组" class="headerlink" title="3 矩阵的初等变换与线性方程组"></a>3 矩阵的初等变换与线性方程组</h1><h2 id="3-1-矩阵的初等变换"><a href="#3-1-矩阵的初等变换" class="headerlink" title="3.1 矩阵的初等变换"></a>3.1 矩阵的初等变换</h2><ul>
+<li><p><strong>定义一</strong>：下面三种变换称为矩阵的<strong>初等行变换</strong>：</p>
+<p>（i） 对换两行（对换i，j 两行，记作ri ↔ rj）；<br>（ii）以数k≠0 乘某一行中的所有元（第i行乘k，记作ri×k） ；<br>（ iii）把某一行所有元的k 倍加到另一行对应的元上去（第j 行的k 倍加到第i行上，记作r<del>i</del> +kr<del>j</del>） .</p>
+</li>
+<li><p>把定义中的“行”换成“列”，即得矩阵的初等列变换的定义（所用记号是把“r”换成“c”）</p>
+</li>
+<li><p>矩阵的初等行变换与初等列变换，统称初等变换.</p>
+</li>
+<li><p>三种初等变换都是可逆的，且其逆变换是同一类型的初等变换</p>
+</li>
+<li><p>如果矩阵A 经有限次初等行变换变成矩阵B，就称矩阵A 与B 行等价；如果矩阵A 经有限次初等列变换变成矩阵B，就称矩阵A与B列等价；如果矩阵A经有限次初等变换变成矩阵B，就称矩阵A与B等价，记作A ～B.</p>
+</li>
+<li><p>矩阵之间的等价关系具有下列性质：</p>
+<p>（i） 反身性：A ～A；<br>（ii）对称性：若A ～B，则B～A；<br>（iii）传递性：若A ～B，B ～C，则A ～C.</p>
+</li>
+<li><p><strong>定义二：</strong></p>
+<p>（1）非零矩阵若满足（i）非零行在零行的上面；（ii）非零行的首非零元所在列在上一行（如果存在的话）的首非零元所在列的右面，则称此矩阵为行阶梯形矩阵；<br>（2）进一步，若A 是行阶梯形矩阵，并且还满足：（i）非零行的首非零元为1； （ii） 首非零元所在的列的其他元均为0，则称A 为行最简形矩阵.</p>
+</li>
+<li><p>用归纳法不难证明：对于任何非零矩阵A，总可经有限次初等行变换把它变为行阶梯形矩阵和行最简形矩阵.</p>
+</li>
+<li><p>一个矩阵的行最简形矩阵是惟一确定的</p>
+</li>
+<li><p>对行最简形矩阵再施以初等列变换，可变成一种形状更简单的矩阵，称为标准形F。其特点是：F 的左上角是一个单位矩阵，其余元全为0.</p>
+</li>
+<li><p>对于m×n 矩阵A，总可经过初等变换（行变换和列变换）把它化为标准形</p>
+</li>
+<li><p><strong>定理一：</strong>设A 与B 为m×n 矩阵，那么：</p>
+<p>（i） 矩阵A 与B 行等价的充分必要条件是存在m 阶可逆矩阵P，使PA = B；<br>（ii） 矩阵A 与B 行等价的充分必要条件是存在n 阶可逆矩阵Q，使AQ = B；<br>（iii）矩阵A 与B 行等价 的充分必要条件是存在m 阶可逆矩阵P 及n 阶可逆矩阵Q，使PAQ = B.</p>
+</li>
+<li><p><strong>定义三：</strong>由单位矩阵E 经过一次初等变换得到的矩阵称为初等矩阵.</p>
+</li>
+<li><p><strong>性质1</strong>： 设A 是一个m×n 矩阵，对A施行一次初等行变换，相当于在A 的左边乘相应的m 阶初等矩阵；对A 施行一次初等列变换，相当于在A 的右边乘相应的n 阶初等矩阵.</p>
+</li>
+<li><p>初等矩阵都是可逆的，且其逆矩阵是同一类型的初等矩阵</p>
+</li>
+<li><p><strong>性质2</strong>： 方阵A 可逆的充分必要条件是存在有限个初等矩阵 P<del>1</del>，P<del>2</del>，… ， P<del>l</del>，使 A = P<del>1</del> P<del>2</del>····P <del>l</del>.</p>
+</li>
+<li><p><strong>推论</strong>：方阵A 可逆的充分必要条件是矩阵A与E行等价</p>
+</li>
+<li><p>当A 为可逆矩阵时，求解方程A X = B 的方法（求A - 1也就是求方程A X = E 的解）. 这方法就是把方程A X = B的增广矩阵（A，B）化为行最简形矩阵，从而求得方程的解. 特别地，求解线性方程组A x = b （A 为可逆矩阵）时把增广矩阵（A，b）化为行最简形矩阵，其最后一列就是解向量。</p>
+</li>
+</ul>
+<h2 id="3-2-矩阵的秩"><a href="#3-2-矩阵的秩" class="headerlink" title="3.2 矩阵的秩"></a>3.2 矩阵的秩</h2><ul>
+<li><p><strong>定义4</strong>：在m×n 矩阵A 中，任取k 行与k 列（k ≤ m，k ≤ n），位于这些行列交叉处的k2 个元素，不改变它们在A 中所处的位置次序而得的k 阶行列式，称为矩阵A 的k 阶子式.</p>
+</li>
+<li><p><strong>引理：</strong>设矩阵A 与B 行等价，则A 与B 中非零子式的最高阶数相等.</p>
+</li>
+<li><p><strong>定义5</strong> ：设在矩阵A 中有一个不等于0的r 阶子式D，且所有r+1阶子式（如果存在的话）全等于0，那么D称为矩阵A 的最高阶非零子式，数r称为矩阵A 的秩，记作R（A）. 并规定零矩阵的秩等于0.</p>
+</li>
+<li><p>由于R（A）是A 的非零子式的最高阶数，因此，若矩阵A 中有某个s 阶子式不为0，则R（A） ≥ s；若A 中所有t 阶子式全为0，则R（A） ＜t.</p>
+</li>
+<li><p>显然，若A 为m×n 矩阵，则0 ≤ R（A）≤ min｛m，n｝.</p>
+</li>
+<li><p>由于行列式与其转置行列式相等，因此A T 的子式与A 的子式对应相等，从而R（A ^T^）= R（A）.</p>
+</li>
+<li><p>对于n 阶矩阵A，由于A 的n 阶子式只有一个|A |，故当|A| ≠0 时R（A）=n，当|A|= 0 时R（A）＜n. 可见可逆矩阵的秩等于矩阵的阶数，不可逆矩阵的秩小于矩阵的阶数.因此，可逆矩阵又称满秩矩.阵，不可逆矩阵（奇异矩阵）又称降秩矩阵.</p>
+</li>
+<li><p>矩阵的初等变换作为一种运算，其深刻意义在于它不改变矩阵的秩</p>
+</li>
+<li><p><strong>定理2</strong>：若A ～B，则R（A）= R（B）.</p>
+</li>
+<li><p><strong>推论</strong>：若可逆矩阵P、Q 使PAQ = B，则R（A）= R（B）.</p>
+</li>
+<li><p>对于行阶梯形矩阵，它的秩就等于非零行的行数</p>
+</li>
+<li><p>矩阵秩的一些最基本的性质：</p>
+<p>① 0 ≤ R（A <del>m×n</del>） ≤　min｛ m，n｝.</p>
+<p>② R（A ^T^）= R（A）.</p>
+<p>③ 若A～B，则R（A）= R（B）.</p>
+<p>④ 若P、Q 可逆，则R（PAQ）= R（A）.</p>
+<p>⑤ max｛R（A），R（B）｝≤R（A，B）≤ R（A）+R（B），特别地，当B = b 为非零列向量量时，有R（A） ≤ R（A，b） ≤ R（A）+1.</p>
+<p>⑥R（A + B） ≤ R（A）+ R（B）.</p>
+<p>⑦R（AB）≤ min｛R（A），R（B）｝</p>
+<p>⑧ 若A <del>m×n</del> B <del>n×l</del> = O，则R（A）+R（B）≤n</p>
+</li>
+<li><p>A 为n 阶矩阵，R（A + E）+R（A - E） ≥n.</p>
+</li>
+<li><p>若A <del>m×n</del> B <del>n×l</del> = C，且R（A）= n，则R（B）= R（C）.</p>
+</li>
+<li><p>A B = O，若A 为列满秩矩阵，则B = O.</p>
+</li>
+</ul>
+<h2 id="3-3-线性方程组的解"><a href="#3-3-线性方程组的解" class="headerlink" title="3.3 线性方程组的解"></a>3.3 线性方程组的解</h2><ul>
+<li><p>线性方程组如果有解，就称它是相容的；如果无解，就称它不相容.</p>
+</li>
+<li><p><strong>定理3</strong> ：n 元线性方程组A x = b<br>（i）无解的充分必要条件是R（A）＜R（A，b）；<br>（ii） 有惟一解的充分必要条件是R（A）= R（A，b）= n；<br>（iii） 有无限多解的充分必要条件是R（A）= R（A，b）＜n.</p>
+</li>
+<li><p><strong>定理4：</strong>n 元齐次线性方程组Ax = 0有非零解的充分必要条件是R（A）＜n.</p>
+</li>
+<li><p><strong>定理5：</strong> 线性方程组A x = b 有解的充分必要条件是R（A）= R（A，b）.</p>
+</li>
+<li><p><strong>定理6</strong>： 矩阵方程A X = B 有解的充分必要条件是R（A）= R（A，B）.</p>
+</li>
+<li><p><strong>定理7：</strong> 设A B = C，则R（C） ≤ min｛ R（A），R（B） ｝</p>
+</li>
+<li><p>线性方程组有两种解法：行列式和初等变换</p>
+<ul>
+<li>系数矩阵不含参数，可用增广矩阵的初等变换</li>
+<li>方针且系数矩阵有参数，可用行列式</li>
+</ul>
+</li>
+<li><p>在秩是r 的矩阵中，可能有也可能没有等于0 的r-1 阶子式，可能有也可能没有等于0 的r 阶子式。</p>
+</li>
+<li><p>设A、B 都是m×n 矩阵，A ～B 的充分必要条件是R（A）= R（B）.</p>
+</li>
+<li><p>R（A）= 1 的充分必要条件是存在非零列向量a 及非零行向量b^T^，使A = ab^T^ .</p>
+</li>
+<li><p>设A 为列满秩矩阵，AB = C，线性方程Bx = 0 与Cx = 0同解.</p>
+</li>
+<li><p>设A 为m×n 矩阵，证明方程A X = E <del>m</del> 有解的充分必要条件是R（A）= m.</p>
+</li>
+</ul>
+<h1 id="4-向量组的线性相关性"><a href="#4-向量组的线性相关性" class="headerlink" title="4 向量组的线性相关性"></a>4 向量组的线性相关性</h1><h2 id="4-1-向量组及其线性组合"><a href="#4-1-向量组及其线性组合" class="headerlink" title="4.1 向量组及其线性组合"></a>4.1 向量组及其线性组合</h2><ul>
+<li><p><strong>定义一：</strong>n 个有次序的数a1，a2，…，an 所组成的数组称为n维向量，这n个数称为该向量的n个分量，第i个数ai 称为第i个分量.</p>
+</li>
+<li><p>列向量用黑体小写字母a，b，α，β等表示，行向量则用列向量的转置等表示.所讨论的向最在没有指明是行向量还是列向量时，都当作列向量.</p>
+</li>
+<li><p>若干个同维数的列向量（或同维数的行向量）所组成的集合叫做向量组.</p>
+</li>
+<li><p><strong>定义2：</strong>给定向量组 A：a<del>1</del>，a<del>2</del>， … ，a<del>m</del>，对于任何一组实数 k<del>1</del>，k<del>2</del>，… ， k<del>m</del>，表达式k<del>1</del>a<del>1</del>+k<del>2</del>a<del>2</del>+… +k<del>m</del>a<del>m</del>称为向量组A 的一个线性组合，k1，k2 ， … ， km 称为这个线性组合的系数.</p>
+</li>
+<li><p>给定向量组 A：a<del>1</del>，a<del>2</del>， … ，a<del>m</del>和向量b，如果存在一组数λ<del>1</del>，λ<del>2</del>，…，λ<del>m</del>，使b =λ<del>1</del> a<del>1</del> +λ<del>2</del> a<del>2</del> + … +λ<del>m</del>a<del>m</del>，则向量b 是向量组A 的线性组合，这时称向量b 能由向量组A 线性表示.</p>
+</li>
+<li><p>向量b 能由向量组A 线性表示，也就是方程组x<del>1</del>a<del>1</del> + x<del>2</del>a<del>2</del> + … + x<del>m</del>a<del>m</del>= b有解。</p>
+</li>
+<li><p><strong>定理1：</strong>向量b 能由向量组A：a<del>1</del>，a<del>2</del>， … ，a<del>m</del>线性表示的充分必要条件是矩阵 A =（a1， a2，… ， a m）的秩等于矩阵 B =（a，1 a2，…，a m，b）的秩.</p>
+</li>
+<li><p><strong>定义3：</strong>设有两个向量组A：a<del>1</del>，a<del>2</del>， … ，a<del>m</del> 及B：b1 ，b2，…，bl，若B 组中的每个向量都能由向量组A线性表示，则称向量组B能由向量组A 线性表示.若向量组A 与向量组B 能相互线性表示，则称这两个向量组等价.</p>
+</li>
+<li><p>B=AK 如果向量组B 能由向量组A 线性表示，则K称为系数矩阵。注意当|K|=0时，不能得出A和B不等价的结论</p>
+</li>
+<li><p>若C<del>m×n</del> = A <del>m×l</del> B<del>l×n</del>，则矩阵C 的列向量组能由矩阵A 的列向量组线性表示，B 为这一表示的系数矩阵。C的行向量组能由B的行向量组线性表示，A 为这一表示的系数矩阵。</p>
+</li>
+<li><p>若矩阵A 与B 列等价，则A 的列向量量组与B 的列向量组等价。</p>
+</li>
+<li><p><strong>定理2：</strong>向量组B：b1，b2，…，bl 能由向量组A：a1，a2，…，a m 线性表示的充分必要条件是矩阵A =（a1，a2，… ， am）的秩等于矩阵（A，B）= （a1，…，am，b1，…，bl）的秩，即R（A）= R（A，B）.</p>
+</li>
+<li><p><strong>推论</strong>：向量组A：a1，a2，…， a m 与向量组B：b1，b 2，…，bl 等价的充分必要条件是R（A）= R（B）= R（A，B），其中A 和B 是向量组A 和B 所构成的矩阵。</p>
+</li>
+<li><p><strong>定理3：</strong> 设向量组B：b1，b2，…，bl 能由向量组A：a1， a2， …，am 线性表示，则R（b1，b2，…，b l ）≤ R(a 1，a 2，…，a m）.</p>
+</li>
+<li><p>可线性表示的条件：</p>
+<ul>
+<li>对矩阵A<del>n×m</del>，存在矩阵K<del>m×n</del>，使AK = E<del>n</del> 的充分必要条件是R（A）= n.</li>
+<li>矩阵方程A<del>n×m</del>X = E<del>n</del> 有解的充分必要条件是R（A）= n</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-向量组的线性相关性"><a href="#4-2-向量组的线性相关性" class="headerlink" title="4.2 向量组的线性相关性"></a>4.2 向量组的线性相关性</h2><ul>
+<li><p><strong>定义4</strong>:给定向量组 A：A：a<del>1</del>，a<del>2</del>， … ，a<del>m</del> 如果存在不全为零的数 k<del>1</del>，k<del>2</del>，… ， k<del>m</del>，使k<del>1</del>a<del>1</del>+k<del>2</del>a<del>2</del>+… +k<del>m</del>a<del>m</del>= 0，则称向量组A 是线性相关的，否则称它线性无关.</p>
+</li>
+<li><p>向量组A：a1，a2， …，a m （m ≥ 2）线性相关，也就是在向量组A 中至少有一个向量能由其余m -1 个向量线性表示.</p>
+</li>
+<li><p><strong>定理4</strong> : 向量组A ：a1， a2， …， a m 线性相关的充分必要条件是它所构成的矩阵A =（a1， a2 ， …， a m）的秩小于向量个数m；向量组A 线性无关的充分必要条件是R（A）= m.</p>
+</li>
+<li><p>n 维单位坐标向量组线性无关.</p>
+</li>
+<li><p>求向量组线性相关性有三种做法，书P89</p>
+</li>
+<li><p><strong>定理5：</strong> </p>
+<ul>
+<li>（1）若向量组A：a1 ，… ，am 线性相关，则向量组B：a1， … ， am， am +1也线性相关.反之，若向量组B 线性无关，则向量组A 也线性无关.</li>
+<li>（2） m 个n 维向量组成的向量组，当维数n 小于向量个数m 时一定线性相关. 特别地n+1 个n 维向量一定线性相关.</li>
+<li>（3） 设向量组A：a1，a2，…，a m 线性无关，而向量组B： a1，…，a m，b 线性相关，则向量b 必能由向量组A 线性表示，且表示式是惟一的.</li>
+</ul>
+</li>
+<li><p>一个向量组若有线性相关的部分组，则该向量组线性相关. 特别地，含零向量的向量组必线性相关.一个向量组若线性无关，则它的任何部分组都线性无关.</p>
+</li>
+<li><p>设向量组a1，a2 ，a3 线性相关，向量组a2，a3，a4 线性无关则（1）a1 能由a2， a 3 线性表示；（2） a4 不能由a1，a2 ， a3 线性表示.</p>
+</li>
+</ul>
+<h2 id="4-3-向量组的秩"><a href="#4-3-向量组的秩" class="headerlink" title="4.3 向量组的秩"></a>4.3 向量组的秩</h2><ul>
+<li><strong>定义5:</strong> 设有向量组A，如果在A 中能选出r 个向量a<del>1</del>，a<del>2</del>，…，a<del>r</del>，满足<pre><code>（i） 向量组A ~0~：a~1~，a~2~，…，a~r~， 线性无关；
+（ii） 向量组A 中任意r+1 个向量（如果A 中有r+1 个向量的话）都线性相关，</code></pre>
+那么称向量组A<del>0</del>是向量组A的一个最大<strong>线性无关向量组</strong>（简称量大无关组），最大无关组所含向量个数r称为<strong>向量组A 的秩</strong>，记作R<del>A</del>.</li>
+<li>只含零向量的向量组没有最大无关组，规定它的秩为0.</li>
+<li>若向量组A 线性无关，则A 自身就是它的最大无关组，而其秩就等于它所含向量的个数.</li>
+<li><strong>定理3 的推论（最大无关组的等价定义）：</strong>设向量组A<del>0</del>： a<del>1</del>，a<del>2</del>， … ， a<del>r</del>是向量组A的一个部分组，且满足<br>  （i） 向量组A<del>0</del> 线性无关；<br>  （ii） 向量组A 的任一向量都能由向量组A<del>0</del>线性表示，<br>那么向量组A<del>0</del> 便是向量组A 的一个最大无关组.</li>
+<li><strong>定理6：</strong> 矩阵的秩等于它的列向量组的秩，也等于它的行向量组的秩.</li>
+<li>若Dr 是矩阵A 的一个最高阶非零子式，则Dr 所在的r列即是A 的列向量组的一个最大无关组，Dr 所在的r行即是A 的行向量组的一个最大无关组.</li>
+<li><strong>定理2′：</strong> 向量组b1，b2，… ，bl 能由向量组a1， a2，…，a m 线性表示的充分必要条件是R（a1 ，a2，…，a m）= R（a1，…，a m，b1，… ， bl）.</li>
+<li><strong>定理3′：</strong> 若向量组B 能由向量组A 线性表示，则R<del>B</del>≤R<del>A</del>.</li>
+</ul>
+<h2 id="4-4-线性方程组的解的结构"><a href="#4-4-线性方程组的解的结构" class="headerlink" title="4.4 线性方程组的解的结构"></a>4.4 线性方程组的解的结构</h2><ul>
+<li>用矩阵的初等变换解线性方程组的方法，并建立了两个重要定理<ul>
+<li>n 个未知数的齐次线性方程组Ax = 0有非零解的充分必要条件是系数矩阵的秩R（A） ＜n.</li>
+<li>n 个未知数的非齐次线性方程组Ax = b 有解的充分必要条件是系数矩阵A 的秩等于增广矩阵B 的秩，且当R（A）= R（B）= n 时方程组有惟一解，当<br>R（A）= R（B）= r＜n 时方程组有无限多个解.</li>
+</ul>
+</li>
+<li>向量组线性相关性的理论来讨论<strong>齐次线性方程组</strong>的解.<ul>
+<li>齐次线性方程组可写成向量方程**A x = 0.**其一组解称为方程的解向量</li>
+<li>解向量的性质：<ul>
+<li><strong>性质1：</strong> 若x =ξ<del>1</del>， x =ξ<del>2</del> 为向量方程的解，则x =ξ<del>1</del> +ξ<del>2</del> 也是向量方程的解.</li>
+<li><strong>性质2：</strong>若x =ξ<del>1</del> 为向量方程的解，k 为实数，则x = kξ<del>1</del> 也是向量方程的解</li>
+</ul>
+</li>
+<li>齐次线性方程组的解集的最大无关组称为该齐次线性方程组的<strong>基础解系.</strong></li>
+<li>要求齐次线性方程组的通解，只需求出它的基础解系.</li>
+<li><strong>定理7：</strong>设m×n 矩阵<strong>A</strong> 的秩R（<strong>A</strong>）= r，则n 元齐次线性方程组<strong>A x = 0</strong>的解集S 的秩R<del>S</del> = n-r.</li>
+<li>当R（<strong>A</strong>）= n 时，方程只有零解，没有基础解系（此时解集S 只含一个零向量）；当R（A）= r＜n 时，由定理7 可知方程组的基础解系含n-r 个向量. 因此，由最大无关组的性质可知，方程组的任何n -r 个线性无关的解都可构成它的基础解系.并由此可知齐次线性方程组的基础解系并不是惟一的，它的通解<br>的形式也不是惟一的.</li>
+<li><strong>A<del>m×n</del> B<del>n×l</del> = O，则R（A）+ R（B） ≤ n.</strong></li>
+<li>设n 元齐次线性方程组<strong>A x = 0</strong>与<strong>Bx = 0</strong>同解，则<strong>R（A）= R（B）</strong>.</li>
+<li>当矩阵<strong>A</strong> 与<strong>B</strong> 的列数相等时，要证<strong>R（A）= R（B）</strong>，只需证明齐次方程<strong>A x = 0</strong> 与<strong>Bx = 0</strong>同解.</li>
+<li><strong>R（A^T^ A）= R（A）.</strong></li>
+</ul>
+</li>
+<li>向量组线性相关性的理论来讨论<strong>非齐次线性方程组</strong>的解.<ul>
+<li><strong>性质3：</strong>设x =η<del>1</del> 及x = η<del>2</del> 都是非齐次线性方程组对应向量方程的解，则x =η<del>1</del>-η<del>2</del> 为对应的齐次线性方程组<strong>Ax = 0</strong>的解.</li>
+<li><strong>性质4：</strong> 设x =η是非齐次线性方程组对应向量方程的解，x =ξ是齐次线性方程组对应向量方程的解，则x =ξ+η仍是非齐次线性方程组对应向量方程的解</li>
+<li>非齐次线性方程组对应向量方程的一个解η*（称为特解）</li>
+<li>非齐次方程的通解= 对应的齐次方程的通解+非齐次方程的一个特解.</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-5-向量空间"><a href="#4-5-向量空间" class="headerlink" title="4.5 向量空间"></a>4.5 向量空间</h2><ul>
+<li><p><strong>定义6：</strong>设V 为n 维向量的集合，如果集合V 非空，且集合V 对于向量的加法及数乘两种运算封闭，那么就称集合V 为向量空间. </p>
+</li>
+<li><p>所谓封闭，是指在集合V 中可以进行向量的加法及数乘两种运算. 具体地说，就是：若a∈V，b∈V，则a +b∈V；若a ∈V， λ∈R，则λa∈V.</p>
+</li>
+<li><p>n 元齐次线性方程组的解集是一个向量空间（称为齐次线性方程组的解空间）</p>
+</li>
+<li><p>非齐次线性方程组的解集不是向量空间.</p>
+</li>
+<li><p>一般地，由向量组 a<del>1</del>，a<del>2</del>，…， a<del>m</del> 所生成的向量空间为<strong>L =｛x =λ<del>1</del> a<del>1</del> +λ<del>2</del> a<del>2</del> +… +λ<del>m</del> a<del>m</del>︳λ<del>1</del>，λ<del>2</del>，…，λ<del>m</del> ∈R ｝</strong> .</p>
+</li>
+<li><p><strong>定义7：</strong>设有向量空间V<del>1</del> 及V<del>2</del>，若V<del>1</del>⊆V<del>2</del>就称V<del>1</del> 是V<del>2</del> 的子空间.</p>
+</li>
+<li><p><strong>定义8：</strong>设V 为向量空间，如果r个向量a<del>1</del>，a<del>2</del> ， … ， a<del>r</del>∈V，且满足</p>
+<pre><code>（i） a~1~， a~2~， … ， a~r~线性无关；
+（ii） V 中任一向量都可由a~1~， a~2~， …， a~r~ 线性表示，</code></pre>
+<p>那么，向量组a<del>1</del> ，a<del>2</del> ，…， a<del>r</del> 就称为向量空间V 的一个基，r 称为向量空间V的维数，并称V为r维向量空间.</p>
+</li>
+<li><p>如果向量空间V 没有基，那么V 的维数为0。0维向量空间只含一个零向量0。</p>
+</li>
+<li><p>V 的基就是向量组的最大无关组，V 的维数就是向量组的秩.</p>
+</li>
+<li><p><strong>定义9：</strong>如果在向量空间 V中取定一个基 a<del>1</del>，a<del>2</del> ， … ， a<del>r</del>，那么 V中任一向量x 可惟一地表示为x = λ<del>1</del> a<del>1</del> +λ<del>2</del> a<del>2</del> +… +λ<del>r</del> a<del>r</del>，数组λ<del>1</del>，λ<del>2</del>， …，λ<del>r</del> 称为向量量x 在基a<del>1</del>，a<del>2</del> ， … ， a<del>r</del>中的坐标.</p>
+</li>
+<li><p>自然基：取单位坐标向量组e<del>1</del>，e<del>2</del>， … ， e<del>n</del> 为基。</p>
+</li>
+<li><p>在R^3^中取定一个基<strong>a<del>1</del>,a<del>2</del>,a<del>3</del>，</strong>再取一个新基<strong>b<del>1</del>,b<del>2</del>,b<del>3</del>,**设</strong>A =（a1，a2，a3）<strong>，</strong>B=（b1，b2，b3）**.求用<strong>a<del>1</del>,a<del>2</del>,a<del>3</del>，</strong> 表示<strong>b<del>1</del>,b<del>2</del>,b<del>3</del>,</strong>,的表示式（基变换公式），并求向量在两个基中的坐标之间的关系式（坐标变换公式）.</p>
+<ul>
+<li>基变换公式为<strong>（b<del>1</del>，b<del>2</del>，b<del>3</del>）=（a<del>1</del>，a<del>2</del>，a<del>3</del>）P，</strong></li>
+<li>其中表示式的系数矩阵<strong>P=A^-1^B</strong>称为从旧基到新基的过渡矩阵.</li>
+</ul>
+</li>
+</ul>
+<h1 id="5-相似矩阵及二次型"><a href="#5-相似矩阵及二次型" class="headerlink" title="5 相似矩阵及二次型"></a>5 相似矩阵及二次型</h1><h2 id="5-1-向量的内积、长度及正交性"><a href="#5-1-向量的内积、长度及正交性" class="headerlink" title="5.1 向量的内积、长度及正交性"></a>5.1 向量的内积、长度及正交性</h2><ul>
+<li><p><strong>定义1：</strong>设有n 维向量</p>
+<p>​    $$ x = \left{ \begin{matrix} x1\ x2 \ \vdots\ xn \end{matrix} \right} $$  $$ y = \left{ \begin{matrix} y1\ y2 \ \vdots\ yn \end{matrix} \right} $$</p>
+<p>令[x，y] =x<del>1</del>y<del>1</del> +x<del>2</del>y<del>2</del> +…+x<del>n</del>y<del>n</del> ，[x，y]称为向量x 与y 的内积.</p>
+</li>
+<li><p>内积是两个向量之间的一种运算，其结果是一个实数，用矩阵记号表示</p>
+</li>
+<li><p>内积具有下列性质（其中x，y，z 为n 维向量，λ为实数）：</p>
+<p>（i） [x，y] = [y，x] ；<br>（ii） [λx，y] =λ[x，y] ；<br>（iii） [x+y，z] = [x，z] +[y，z]；<br>（iv）当x = 0 时，[x，x] = 0；当x≠0时，[x，x]＞0.</p>
+</li>
+<li><p>施瓦茨（Schwarz）不等式：[x，y]^2^ ≤ [x，x][y，y]</p>
+</li>
+<li><p>定义2 令<br>｜　x ｜称为n维向量x的长　度（或范数）</p>
+</li>
+</ul>
+<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><h1 id="1-行列式-1"><a href="#1-行列式-1" class="headerlink" title="1 行列式"></a>1 行列式</h1><h2 id="1-1-二阶与三阶行列式-1"><a href="#1-1-二阶与三阶行列式-1" class="headerlink" title="1.1 二阶与三阶行列式"></a>1.1 二阶与三阶行列式</h2><ul>
+<li>二阶与三阶行列式的定义和对角线法则</li>
+</ul>
+<h2 id="1-2-全排列和对换-1"><a href="#1-2-全排列和对换-1" class="headerlink" title="1.2 全排列和对换"></a>1.2 全排列和对换</h2><ul>
+<li>全排列、标准次序、逆序、排列的逆序数、奇排列、偶排列、对换、相邻对换</li>
+<li><strong>定理1：</strong>一个排列中的任意两个元素对换，排列改变奇偶性.</li>
+<li><strong>推论：</strong>奇排列对换成标准排列的对换次数为奇数，偶排列对换成标准排列的对换次数为偶数.</li>
+</ul>
+<h2 id="1-3-n-阶行列式的定义-1"><a href="#1-3-n-阶行列式的定义-1" class="headerlink" title="1.3 n 阶行列式的定义"></a>1.3 n 阶行列式的定义</h2><ul>
+<li>n！项之和，每一项都是不同行不同列的n个数的乘积，并冠以逆序数决定的符号</li>
+<li>上（下）三角行列式和对角行列式的值为对角线上所有数的乘积。</li>
+</ul>
+<h2 id="1-4-行列式的性质-1"><a href="#1-4-行列式的性质-1" class="headerlink" title="1.4 行列式的性质"></a>1.4 行列式的性质</h2><ul>
+<li><p><strong>性质1：</strong>行列式与它的转置行列式相等。所以得出行列式中行和列地位相等。</p>
+</li>
+<li><p><strong>性质2：</strong>对换行列式的两行（列），行列式变号。</p>
+</li>
+<li><p><strong>性质2推论：</strong>如果行列式有两行（列）完全相同，则此行列式等于零.</p>
+</li>
+<li><p><strong>性质3：</strong>行列式的某一行（列）中所有的元素都乘同一数k，等于用数k 乘此行列式.</p>
+</li>
+<li><p><strong>性质3推论：</strong>行列式中某一行（列）的所有元素的公因子可以提到行列式记号的外面.</p>
+</li>
+<li><p><strong>性质4：</strong>行列式中如果有两行（列）元素成比例，则此行列式等于零.</p>
+</li>
+<li><p><strong>性质5：</strong>若行列式的某一行（列）的元素都是两数之和，则可以按照这一行依次拆开，拆成两个行列式之和。若n 阶行列式每个元素都表示成两数之和，则它可分解成2^n^ 个行列式.</p>
+</li>
+<li><p><strong>性质6：</strong>把行列式的某一行（列）的各元素乘同一数然后加到另一行（列）对应的元素上去，行列式不变.</p>
+</li>
+<li><p>关于副对角线构成上（下）三角形行列式，其最终结果为：D = （-1）^n(n-1)/2^a<del>1n</del>a<del>2,n-1</del>···a<del>n1</del>    # 副对角线上个项乘积，正负号由n确定</p>
+</li>
+<li><p>计算行列式时以下几种方法：</p>
+<ol>
+<li>一般要把第一行的第一个数换成1，这样方便计算</li>
+<li>如果各行或者各列的值和相同，可以考虑把其都加到第一行（列），这样可以提出公因式。</li>
+<li>计算是注意顺序，一旦某行或者列值改变了就不能用以前的值了</li>
+<li>注意性质6的描述顺序，是哪一项乘同一数然后加到哪一项上</li>
+<li>用归纳法不难证明：任何n 阶行列式总能利用运算化为上三角形行列式，或化为下三角形行列式。类似地，利用列运算也可把行列式化为上三角形行列式或下三角形行列式.</li>
+<li>如果行列式可以整个分块，右上角或左下角全部为0，也就是说整体可以化成上（下）三角行列式，这时其等于对角线行列式乘积。</li>
+<li>有些行列式可以找其递归规律求得最后结果。</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-5-行列式按行（列）展开-1"><a href="#1-5-行列式按行（列）展开-1" class="headerlink" title="1.5 行列式按行（列）展开"></a>1.5 行列式按行（列）展开</h2><ul>
+<li>余子式，记作M<del>ij</del>；代数余子式A<del>ij</del></li>
+<li><strong>引理：</strong>一个n 阶行列式，如果其中第i行所有元素除（i，j）元a<del>ij</del>外都为零，那么这行列式等于a<del>ij</del>与它的代数余子式的乘积，即：D = a<del>ij</del> A <del>ij</del>.</li>
+<li><strong>定理2：</strong>行列式等于它的任一行（列）的各元素与其对应的代数余子式乘积之和。该定理叫做行列式按行（列）展开法则。</li>
+<li>范德蒙德行列式，其可以根据相应的递推公式求得。</li>
+<li><strong>定理2推论：</strong>行列式某一行（列）的元素与另一行（列）的对应元素的代数余子式乘积之和等于零。</li>
+</ul>
+<h1 id="2-矩阵及其运算-1"><a href="#2-矩阵及其运算-1" class="headerlink" title="2 矩阵及其运算"></a>2 矩阵及其运算</h1><h2 id="2-1-线性方程组和矩阵-1"><a href="#2-1-线性方程组和矩阵-1" class="headerlink" title="2.1 线性方程组和矩阵"></a>2.1 线性方程组和矩阵</h2><ul>
+<li>n元齐次线性方程组，n元非齐次线性方程组</li>
+<li><strong>定义一：</strong>矩阵</li>
+<li>方阵、同型矩阵、矩阵相等、系数矩阵、未知数矩阵、常数项矩阵、增广矩阵、线性变化、对角阵、单位阵</li>
+</ul>
+<h2 id="2-2-矩阵的运算-1"><a href="#2-2-矩阵的运算-1" class="headerlink" title="2.2 矩阵的运算"></a>2.2 矩阵的运算</h2><ul>
+<li><p><strong>定义二：</strong>矩阵的加法：对应各位直接相加</p>
+</li>
+<li><p><strong>定义三：</strong>数与矩阵相乘：λ对矩阵中的所有数做乘法</p>
+</li>
+<li><p><strong>定义四：</strong>矩阵与矩阵乘积</p>
+</li>
+<li><p>对于两个n阶方阵<strong>A</strong>、<strong>B</strong>，若<strong>AB</strong> = <strong>BA</strong>，则称方阵<strong>A</strong>与<strong>B</strong>是<strong>可交换</strong>的.</p>
+</li>
+<li><p>纯量阵λ<strong>E</strong>与任何同阶方阵都是可交换的。</p>
+</li>
+<li><p>矩阵的幂</p>
+</li>
+<li><p><strong>定义五：</strong>矩阵的转置</p>
+<p>矩阵的转置也是一种运算，满足下述运算规律:</p>
+<p>（1） （<strong>A</strong>^T^）^T^= <strong>A</strong>；<br>（ii） （<strong>A</strong> + <strong>B</strong>）^T^ = <strong>A</strong>^T^ + <strong>B</strong> ^T^ ；<br>（iii） （λ<strong>A</strong>）^T^ =λ<strong>A</strong>^T^；<br>（iv） （ <strong>AB</strong>）^T^= <strong>B</strong> ^T^ <strong>A</strong> ^T^.</p>
+</li>
+<li><p>设<strong>A</strong>为n阶方阵，如果满足<strong>A</strong>^T^=<strong>A</strong>，那么<strong>A</strong> 称为对称矩阵，简称对称阵。对称矩阵的特点是：它的元素以对角线为对称轴对应相等。</p>
+</li>
+<li><p><strong>定义六：</strong>方阵的行列式</p>
+<p>由<strong>A</strong> 确定|<strong>A</strong>|的这个运算满足下述运算规律（设<strong>A</strong>、<strong>B</strong> 为n阶方阵，λ为数）：</p>
+<p>（i）|<strong>A</strong> ^T^|=|<strong>A</strong>|；<br>（ii）|λ<strong>A</strong>|=λ^n^ |<strong>A</strong>|；<br>（iii） |<strong>AB</strong>|=|<strong>A</strong>||<strong>B</strong>|.</p>
+</li>
+<li><p>对于n 阶矩阵<strong>A</strong>、<strong>B</strong>，一般来说<strong>AB</strong>≠<strong>BA</strong>，但总有|<strong>AB</strong>|=|<strong>BA</strong>|=|<strong>A</strong>||<strong>B</strong>|.</p>
+</li>
+<li><p>矩阵<strong>A</strong> 的伴随矩阵，简称伴随阵。其对应行列式各个元素对应的代数余子式在各个元素的相应位置构成的矩阵的<strong>转置</strong>。</p>
+</li>
+<li><p><strong>AA * = A*A =|A|E.</strong></p>
+</li>
+</ul>
+<h2 id="2-3-逆矩阵-1"><a href="#2-3-逆矩阵-1" class="headerlink" title="2.3 逆矩阵"></a>2.3 逆矩阵</h2><ul>
+<li><p><strong>定义七：</strong>对于n阶矩阵<strong>A</strong>，如果有一个n阶矩阵<strong>B</strong>，使<strong>AB</strong>= <strong>BA</strong> = <strong>E</strong>，则说矩阵<strong>A</strong>是可逆的，并把矩阵<strong>B</strong>称为<strong>A</strong>的逆矩阵，简称逆阵.</p>
+</li>
+<li><p>矩阵与其逆矩阵是可交换的。如果矩阵<strong>A</strong>是可逆的，那么<strong>A</strong>的逆矩阵是惟一的.</p>
+</li>
+<li><p>定理1：若矩阵<strong>A</strong> 可逆，则|<strong>A</strong>|≠0.</p>
+</li>
+<li><p>定理2：若|<strong>A</strong>|≠0，则矩阵<strong>A</strong> 可逆，且<strong>A</strong>^-1^=1/|A|*<strong>A</strong>^<em>^其中A^</em>^为矩阵A 的伴随矩阵.当|A|=0 时，A 称为奇异矩阵，否则称非奇异矩阵.</p>
+</li>
+<li><p>推论：若<strong>AB</strong> = <strong>E</strong> （或<strong>BA</strong> = <strong>E</strong>），则<strong>B</strong> =<strong>A</strong>^-1^.</p>
+</li>
+<li><p>逆矩阵满足下述运算规律：</p>
+<p>（i）若A可逆，则A^-1^亦可逆，且（A^-1^）^-1^ = A；<br>（ii）若A可逆，数λ≠0，则λA 可逆，且（λA）^-1^= 1/λ*A^-1^<br>（iii） 若A、B为同阶矩阵且均可逆，则A B 亦可逆，且（AB）^-1^ = B^-1^ A ^-1^.<br>（iv） 若A可逆，则A^T^亦可逆，且（A^T^ ）^-1^ =（A ^-1^）^T^  .</p>
+</li>
+<li><p>求逆矩阵的步骤：1计算|A|是否为零，判断逆矩阵是否存在 2.计算余子式 3. 计算代数余子式 4.代数余子式转置 5. A^-1^=A^*^/|A|</p>
+</li>
+<li><p><strong>A</strong>的多项式φ（<strong>A</strong>）=a**<del>0</del>E** +a<del>1</del> <strong>A</strong> +…+a <del>m</del> <strong>A ^m^</strong>：</p>
+</li>
+</ul>
+<p>（i） 如果<strong>A</strong> = <strong>PΛP</strong>^-1^，则<strong>A</strong>^k^ = <strong>PΛ^k^ P^-1^</strong>，从而φ（<strong>A</strong>）=a**<del>0</del>E** +a<del>1</del> <strong>A</strong> +…+a <del>m</del> <strong>A ^m^</strong>= <strong>P φ（Λ）P ^-1^</strong>.<br>（ii） 如果<strong>Λ</strong>= diag（λ<del>1</del>，λ<del>2</del>，…，λ<del>n</del>）为对角矩阵，则<strong>Λ</strong>^k^= diag（λ<del>1</del>^k^，λ<del>2</del>^k^，…，λ<del>n</del>^k^）.φ（<strong>Λ</strong>）也是n 阶对角矩阵，φ（<strong>Λ</strong>）=diag(φ(λ<del>1</del>)，φ(λ<del>2</del>)，…，φ(λ<del>n</del>))</p>
+<h2 id="2-4-克拉默法则-1"><a href="#2-4-克拉默法则-1" class="headerlink" title="2.4 克拉默法则"></a>2.4 克拉默法则</h2><ul>
+<li>克拉默法则:如果线性方程组的系数矩阵A 的行列式不等于零，那么，方程组有惟一解。（具体形式看书）</li>
+<li>其解决的是方程个数与未知数个数相等并且系数行列式不等于零的线性方程组。</li>
+<li>也可以用逆矩阵的形式来做</li>
+</ul>
+<h2 id="2-5-矩阵分块法-1"><a href="#2-5-矩阵分块法-1" class="headerlink" title="2.5 矩阵分块法"></a>2.5 矩阵分块法</h2><ul>
+<li><p>分块矩阵的运算规则和普通矩阵的运算规则类似</p>
+<ul>
+<li>加法：对应块直接相加</li>
+<li>λ数乘：每个块都乘λ</li>
+<li>矩阵乘法：与未分块类似</li>
+<li>转置：整体大转置，内部小转置</li>
+<li>分块对角矩阵：<strong>A</strong> = diag(<strong>A</strong><del>1</del> <strong>A</strong><del>2</del>·····<strong>A</strong><del>s</del>)，且<strong>A</strong><del>i</del>均为方阵</li>
+<li>分块矩阵性质：<ul>
+<li>|<strong>A</strong>| = |<strong>A</strong><del>1</del>||<strong>A</strong><del>2</del>|·····|<strong>A</strong><del>s</del>|</li>
+<li>则<strong>A</strong>^-1^=diag(<strong>A</strong><del>1</del>^-1^ <strong>A</strong><del>2</del>^-1^·····<strong>A</strong><del>s</del>^-1^）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>矩阵<strong>A</strong> = <strong>O</strong> 的充分必要条件是方阵<strong>A^T^A = O</strong> .</p>
+</li>
+<li><p><strong>A</strong>，<strong>B</strong> 都是n阶对称矩阵，<strong>AB</strong>是对称矩阵的充分必要条件是<strong>AB</strong> = <strong>BA</strong> .</p>
+</li>
+<li><p>设矩阵<strong>A</strong>可逆，其伴随矩阵<strong>A*<strong>也可逆，且（</strong>A*</strong> ）^-1^ =（<strong>A</strong> ^-1^）*</p>
+</li>
+<li><p>设n 阶矩阵A 及s 阶矩阵B 都可逆 $\begin{bmatrix}O &amp; A \ B &amp; O\ \end{bmatrix}$^-1^=$\begin{bmatrix}O &amp; B^{-1} \ A^{-1} &amp; O\ \end{bmatrix}$</p>
+</li>
+</ul>
+<h1 id="3-矩阵的初等变换与线性方程组-1"><a href="#3-矩阵的初等变换与线性方程组-1" class="headerlink" title="3 矩阵的初等变换与线性方程组"></a>3 矩阵的初等变换与线性方程组</h1><h2 id="3-1-矩阵的初等变换-1"><a href="#3-1-矩阵的初等变换-1" class="headerlink" title="3.1 矩阵的初等变换"></a>3.1 矩阵的初等变换</h2><ul>
+<li><p><strong>定义一</strong>：下面三种变换称为矩阵的<strong>初等行变换</strong>：</p>
+<p>（i） 对换两行（对换i，j 两行，记作ri ↔ rj）；<br>（ii）以数k≠0 乘某一行中的所有元（第i行乘k，记作ri×k） ；<br>（ iii）把某一行所有元的k 倍加到另一行对应的元上去（第j 行的k 倍加到第i行上，记作r<del>i</del> +kr<del>j</del>） .</p>
+</li>
+<li><p>把定义中的“行”换成“列”，矩阵的初等列变换。矩阵的初等行变换与初等列变换，统称初等变换.</p>
+</li>
+<li><p>三种初等变换都是可逆的，且其逆变换是同一类型的初等变换</p>
+</li>
+<li><p>矩阵A与B行等价；列等价；等价</p>
+</li>
+<li><p>矩阵之间的等价关系具有下列性质：</p>
+<p>（i） 反身性：<strong>A</strong> ～<strong>A</strong>；<br>（ii）对称性：若<strong>A</strong> ～<strong>B</strong>，则<strong>B</strong>～<strong>A</strong>；<br>（iii）传递性：若<strong>A</strong> ～<strong>B</strong>，<strong>B</strong> ～<strong>C</strong>，则<strong>A</strong> ～<strong>C</strong>.</p>
+</li>
+<li><p><strong>定义二：</strong></p>
+<p>（1）非零矩阵若满足（i）非零行在零行的上面；（ii）非零行的首非零元所在列在上一行（如果存在的话）的首非零元所在列的右面，则称此矩阵为<strong>行阶梯形矩阵；</strong><br>（2）进一步，若A 是行阶梯形矩阵，并且还满足：（i）非零行的首非零元为1； （ii） 首非零元所在的列的其他元均为0，则称A 为<strong>行最简形矩阵.</strong></p>
+</li>
+<li><p>对于任何非零矩阵A，总可经有限次初等行变换把它变为行阶梯形矩阵和行最简形矩阵.</p>
+</li>
+<li><p>一个矩阵的行最简形矩阵是惟一确定的</p>
+</li>
+<li><p>标准形<strong>F</strong>：<strong>F</strong> 的左上角是一个单位矩阵，其余元全为0.</p>
+</li>
+<li><p>对于m×n 矩阵A，总可经过初等变换（行变换和列变换）把它化为标准形</p>
+</li>
+<li><p><strong>定理一：</strong>设<strong>A</strong>与<strong>B</strong>为m×n 矩阵，那么：</p>
+<p>（i） 矩阵<strong>A</strong>与<strong>B</strong>行等价的充分必要条件是存在m 阶可逆矩阵<strong>P</strong>，使<strong>PA</strong> = <strong>B</strong>；<br>（ii） 矩阵<strong>A</strong>与<strong>B</strong>行等价的充分必要条件是存在n 阶可逆矩阵<strong>Q</strong>，使<strong>AQ</strong> = <strong>B</strong>；<br>（iii）矩阵<strong>A</strong>与<strong>B</strong>行等价 的充分必要条件是存在m 阶可逆矩阵<strong>P</strong> 及n 阶可逆矩阵<strong>Q</strong>，使<strong>PAQ</strong> = <strong>B</strong>.</p>
+</li>
+<li><p><strong>定义三：</strong>由单位矩阵<strong>E</strong>经过一次初等变换得到的矩阵称为初等矩阵.</p>
+</li>
+<li><p><strong>性质1</strong>： 设A 是一个m×n 矩阵，对A施行一次初等行变换，相当于在A 的左边乘相应的m 阶初等矩阵；对<strong>A</strong>施行一次初等列变换，相当于在<strong>A</strong>的右边乘相应的n 阶初等矩阵.</p>
+</li>
+<li><p><strong>性质2</strong>： 方阵<strong>A</strong> 可逆的充分必要条件是存在有限个初等矩阵 P<del>1</del>，P<del>2</del>，… ， P<del>l</del>，使 <strong>A</strong> = P<del>1</del> P<del>2</del>····P <del>l</del>.</p>
+</li>
+<li><p><strong>推论</strong>：方阵<strong>A</strong>可逆的充分必要条件是矩阵A与E行等价</p>
+</li>
+<li><p>可用初等行变换来解<strong>A</strong>^-1^或矩阵方程。</p>
+</li>
+</ul>
+<h2 id="3-2-矩阵的秩-1"><a href="#3-2-矩阵的秩-1" class="headerlink" title="3.2 矩阵的秩"></a>3.2 矩阵的秩</h2><ul>
+<li><p><strong>定义4</strong>：在m×n 矩阵<strong>A</strong>中，任取k行与k列（k ≤ m，k ≤ n），位于这些行列交叉处的k^2^ 个元素，不改变它们在A中所处的位置次序而得的k阶行列式，称为矩阵A 的k阶子式.</p>
+</li>
+<li><p><strong>引理：</strong>设矩阵 <strong>A</strong> 与 B 行等价，则 <strong>A</strong> 与 <strong>B</strong> 中非零子式的最高阶数相等.</p>
+</li>
+<li><p><strong>定义5</strong> ：设在矩阵<strong>A</strong> 中有一个不等于0的r 阶子式D，且所有r+1阶子式（如果存在的话）全等于0，那么D称为矩阵A 的最高阶非零子式，数r称为矩阵<strong>A</strong> 的秩，记作R（<strong>A</strong>）. 并规定零矩阵的秩等于0.</p>
+</li>
+<li><p>若<strong>A</strong> 为m×n 矩阵，则0 ≤ R（<strong>A</strong>）≤ min｛m，n｝.</p>
+</li>
+<li><p>R（<strong>A ^T^</strong>）= R（<strong>A</strong>）.</p>
+</li>
+<li><p>可见可逆矩阵的秩等于矩阵的阶数，不可逆矩阵的秩小于矩阵的阶数.因此，可逆矩阵又称满秩矩阵，不可逆矩阵（奇异矩阵）又称降秩矩阵.</p>
+</li>
+<li><p>矩阵的初等变换不改变矩阵的秩</p>
+</li>
+<li><p><strong>定理2</strong>：若<strong>A</strong> ～<strong>B</strong>，则R（<strong>A</strong>）= R（<strong>B</strong>）.</p>
+</li>
+<li><p><strong>推论</strong>：若可逆矩阵<strong>P</strong>、<strong>Q</strong> 使<strong>PAQ</strong> = <strong>B</strong>，则R（<strong>A</strong>）= R（<strong>B</strong>）.</p>
+</li>
+<li><p>对于行阶梯形矩阵，它的秩就等于非零行的行数</p>
+</li>
+<li><p>矩阵秩的一些最基本的性质：</p>
+<p>① 0 ≤ R（<strong>A</strong> <del>m×n</del>） ≤　min｛ m，n｝.</p>
+<p>② R（<strong>A ^T^</strong>）= R（<strong>A</strong>）.</p>
+<p>③ 若<strong>A</strong>～<strong>B</strong>，则R（<strong>A</strong>）= R（<strong>B</strong>）.</p>
+<p>④ 若<strong>P、Q</strong> 可逆，则R（<strong>PAQ</strong>）= R（<strong>A</strong>）.</p>
+<p>⑤ max｛R（<strong>A</strong>），R（<strong>B</strong>）｝≤R（<strong>A</strong>，<strong>B</strong>）≤ R（<strong>A</strong>）+R（<strong>B</strong>），特别地，当B = b 为非零列向量量时，有R（A） ≤ R（A，b） ≤ R（A）+1.</p>
+<p>⑥R（<strong>A</strong> + <strong>B</strong>） ≤ R（<strong>A</strong>）+ R（<strong>B</strong>）.</p>
+<p>⑦R（<strong>AB</strong>）≤ min｛R（<strong>A</strong>），R（<strong>B</strong>）｝</p>
+<p>⑧ 若<strong>A</strong> <del>m×n</del> <strong>B</strong> <del>n×l</del> = <strong>O</strong>，则R（<strong>A</strong>）+R（<strong>B</strong>）≤n</p>
+</li>
+<li><p><strong>A</strong> 为n 阶矩阵，R（<strong>A</strong> + <strong>E</strong>）+R（<strong>A</strong> - <strong>E</strong>） ≥n.</p>
+</li>
+<li><p>若<strong>A</strong> <del>m×n</del> <strong>B</strong> <del>n×l</del> = <strong>C</strong>，且R（<strong>A</strong>）= n，则R（<strong>B</strong>）= R（<strong>C</strong>）.</p>
+</li>
+<li><p><strong>AB</strong> = <strong>O</strong>，若<strong>A</strong> 为列满秩矩阵，则<strong>B</strong> = <strong>O</strong>.</p>
+</li>
+</ul>
+<h2 id="3-3-线性方程组的解-1"><a href="#3-3-线性方程组的解-1" class="headerlink" title="3.3 线性方程组的解"></a>3.3 线性方程组的解</h2><ul>
+<li><p>线性方程组如果有解，就称它是相容的；如果无解，就称它不相容.</p>
+</li>
+<li><p><strong>定理3</strong> ：n 元线性方程组<strong>A</strong>x = <strong>b</strong><br>（i）无解的充分必要条件是R（<strong>A</strong>）＜R（<strong>A</strong>，<strong>b</strong>）；<br>（ii） 有惟一解的充分必要条件是R（<strong>A</strong>）= R（<strong>A</strong>，<strong>b</strong>）= n；<br>（iii） 有无限多解的充分必要条件是R（<strong>A</strong>）= R（<strong>A</strong>，<strong>b</strong>）＜n.</p>
+</li>
+<li><p><strong>定理4：</strong> n元齐次线性方程组<strong>Ax</strong> = 0有非零解的充分必要条件是R（<strong>A</strong>）＜n.</p>
+</li>
+<li><p><strong>定理5：</strong> 线性方程组<strong>Ax</strong> = <strong>b</strong> 有解的充分必要条件是R（<strong>A</strong>）= R（<strong>A</strong>，<strong>b</strong>）.</p>
+</li>
+<li><p><strong>定理6</strong>： 矩阵方程<strong>AX</strong> = <strong>B</strong> 有解的充分必要条件是R（<strong>A</strong>）= R（<strong>A</strong>，<strong>B</strong>）.</p>
+</li>
+<li><p><strong>定理7：</strong> 设<strong>AB</strong> = <strong>C</strong>，则R（<strong>C</strong>） ≤ min｛ R（<strong>A</strong>），R（<strong>B</strong>） ｝</p>
+</li>
+<li><p>线性方程组有两种解法：行列式和初等变换</p>
+<ul>
+<li>系数矩阵不含参数，可用增广矩阵的初等变换</li>
+<li>方针且系数矩阵有参数，可用行列式</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-向量组的线性相关性-1"><a href="#4-向量组的线性相关性-1" class="headerlink" title="4 向量组的线性相关性"></a>4 向量组的线性相关性</h1><h2 id="4-1-向量组及其线性组合-1"><a href="#4-1-向量组及其线性组合-1" class="headerlink" title="4.1 向量组及其线性组合"></a>4.1 向量组及其线性组合</h2><ul>
+<li><p><strong>定义一：</strong>n 个有次序的数a<del>1</del>，a<del>2</del>，…，a<del>n</del> 所组成的数组称为n维向量，这n个数称为该向量的n个分量，第i个数a<del>i</del> 称为第i个分量.</p>
+</li>
+<li><p>所讨论的向最在没有指明是行向量还是列向量时，都当作列向量.</p>
+</li>
+<li><p>向量组.</p>
+</li>
+<li><p><strong>定义2：</strong>给定向量组 A：a<del>1</del>，a<del>2</del>， … ，a<del>m</del>，对于任何一组实数 k<del>1</del>，k<del>2</del>，… ， k<del>m</del>，表达式k<del>1</del>a<del>1</del>+k<del>2</del>a<del>2</del>+… +k<del>m</del>a<del>m</del>称为向量组A 的一个线性组合，k1，k2 ， … ， km 称为这个线性组合的系数.</p>
+</li>
+<li><p>向量b 能由向量组A 线性表示，也就是方程组x<del>1</del>a<del>1</del> + x<del>2</del>a<del>2</del> + … + x<del>m</del>a<del>m</del>= b有解。</p>
+</li>
+<li><p><strong>定理1：</strong>向量b 能由向量组A：a<del>1</del>，a<del>2</del>， … ，a<del>m</del>线性表示的充分必要条件是矩阵 A =（a1， a2，… ， a m）的秩等于矩阵 B =（a，1 a2，…，a m，b）的秩.</p>
+</li>
+<li><p><strong>定义3：</strong>设有两个向量组A：a<del>1</del>，a<del>2</del>， … ，a<del>m</del> 及B：b1 ，b2，…，bl，若B 组中的每个向量都能由向量组A线性表示，则称向量组B能由向量组A 线性表示.若向量组A 与向量组B 能相互线性表示，则称这两个向量组等价.</p>
+</li>
+<li><p>若C<del>m×n</del> = A <del>m×l</del> B<del>l×n</del>，则矩阵C 的列向量组能由矩阵A 的列向量组线性表示，B 为这一表示的系数矩阵。C的行向量组能由B的行向量组线性表示，A 为这一表示的系数矩阵。</p>
+</li>
+<li><p><strong>定理2：</strong>向量组B：b<del>1</del>，b<del>2</del>，…，b<del>l</del> 能由向量组A：a<del>1</del>，a<del>2</del>，…，a<del>m</del> 线性表示的充分必要条件是矩阵A =（a<del>1</del>，a<del>2</del>，… ， a<del>m</del>）的秩等于矩阵（A，B）= （a<del>1</del>，…，a<del>m</del>，b<del>1</del>，…，b<del>l</del>）的秩，即R（A）= R（A，B）.</p>
+</li>
+<li><p><strong>推论</strong>：向量组A：a<del>1</del>，a<del>2</del>，…，a<del>m</del>与向量组B：b<del>1</del>，b<del>2</del>，…，b<del>l</del>等价的充分必要条件是R（A）= R（B）= R（A，B），其中A和B是向量组A和B所构成的矩阵。</p>
+</li>
+<li><p><strong>定理3：</strong> 设向量组B：b1，b2，…，bl 能由向量组A：a1， a2， …，am 线性表示，则R（b1，b2，…，b l ）≤ R(a 1，a 2，…，a m）.</p>
+</li>
+</ul>
+<h2 id="4-2-向量组的线性相关性-1"><a href="#4-2-向量组的线性相关性-1" class="headerlink" title="4.2 向量组的线性相关性"></a>4.2 向量组的线性相关性</h2><ul>
+<li><strong>定义4</strong>:给定向量组 A：a<del>1</del>，a<del>2</del>， … ，a<del>m</del> 如果存在不全为零的数 k<del>1</del>，k<del>2</del>，…，k<del>m</del>，使k<del>1</del>a<del>1</del>+k<del>2</del>a<del>2</del>+… +k<del>m</del>a<del>m</del>= 0，则称向量组A是线性相关的，否则称它线性无关.</li>
+<li><strong>定理4</strong> : 向量组A ：a1， a2， …， a m 线性相关的充分必要条件是它所构成的矩阵A =（a1， a2 ， …， a m）的秩小于向量个数m；向量组A 线性无关的充分必要条件是R（A）= m.</li>
+<li>n 维单位坐标向量组线性无关.</li>
+<li>求向量组线性相关性有三种做法<ul>
+<li>按照线性相关性的定义，通过向量运算得到以K为系数矩阵的齐次方程，然后转化成求方程组只有零解</li>
+<li>也可直接转换成系数矩阵，得到其相应的方程</li>
+<li>可利用矩阵的秩的相关知识</li>
+</ul>
+</li>
+<li><strong>定理5：</strong> <ul>
+<li>（1）若向量组A：a1 ，… ，am 线性相关，则向量组B：a1， … ， am， am +1也线性相关.反之，若向量组B 线性无关，则向量组A 也线性无关.</li>
+<li>（2） m 个n 维向量组成的向量组，当维数n 小于向量个数m 时一定线性相关. 特别地n+1 个n 维向量一定线性相关.</li>
+<li>（3） 设向量组A：a1，a2，…，a m 线性无关，而向量组B： a1，…，a m，b 线性相关，则向量b 必能由向量组A 线性表示，且表示式是惟一的.</li>
+</ul>
+</li>
+<li>一个向量组若有线性相关的部分组，则该向量组线性相关. 特别地，含零向量的向量组必线性相关.一个向量组若线性无关，则它的任何部分组都线性无关.</li>
+</ul>
+<h2 id="4-3-向量组的秩-1"><a href="#4-3-向量组的秩-1" class="headerlink" title="4.3 向量组的秩"></a>4.3 向量组的秩</h2><ul>
+<li><strong>定义5:</strong> 设有向量组A，如果在A 中能选出r 个向量a<del>1</del>，a<del>2</del>，…，a<del>r</del>，满足<pre><code>（i） 向量组A ~0~：a~1~，a~2~，…，a~r~， 线性无关；
+（ii） 向量组A 中任意r+1 个向量（如果A 中有r+1 个向量的话）都线性相关，</code></pre>
+那么称向量组A<del>0</del>是向量组A的一个最大<strong>线性无关向量组</strong>（简称量大无关组），最大无关组所含向量个数r称为<strong>向量组A 的秩</strong>，记作R<del>A</del>.</li>
+<li><strong>定理3 的推论（最大无关组的等价定义）：</strong>设向量组A<del>0</del>： a<del>1</del>，a<del>2</del>， … ， a<del>r</del>是向量组A的一个部分组，且满足<br>  （i） 向量组A<del>0</del> 线性无关；<br>  （ii） 向量组A 的任一向量都能由向量组A<del>0</del>线性表示，<br>那么向量组A<del>0</del> 便是向量组A 的一个最大无关组.</li>
+<li><strong>定理6：</strong> 矩阵的秩等于它的列向量组的秩，也等于它的行向量组的秩</li>
+<li><strong>定理2′：</strong> 向量组b1，b2，… ，bl 能由向量组a1， a2，…，a m 线性表示的充分必要条件是R（a1 ，a2，…，a m）= R（a1，…，a m，b1，… ， bl）.</li>
+<li><strong>定理3′：</strong> 若向量组B 能由向量组A 线性表示，则R<del>B</del>≤R<del>A</del>.</li>
+</ul>
+<h2 id="4-4-线性方程组的解的结构-1"><a href="#4-4-线性方程组的解的结构-1" class="headerlink" title="4.4 线性方程组的解的结构"></a>4.4 线性方程组的解的结构</h2><ul>
+<li>向量组线性相关性的理论来讨论<strong>齐次线性方程组</strong>的解.<ul>
+<li>解向量的性质：<ul>
+<li><strong>性质1：</strong> 若x =ξ<del>1</del>， x =ξ<del>2</del> 为向量方程的解，则x =ξ<del>1</del> +ξ<del>2</del> 也是向量方程的解.</li>
+<li><strong>性质2：</strong>若x =ξ<del>1</del> 为向量方程的解，k 为实数，则x = kξ<del>1</del> 也是向量方程的解</li>
+</ul>
+</li>
+<li><strong>基础解系.</strong></li>
+<li><strong>定理7：</strong>设m×n 矩阵<strong>A</strong> 的秩R（<strong>A</strong>）= r，则n 元齐次线性方程组<strong>A x = 0</strong>的解集S 的秩R<del>S</del> = n-r.</li>
+<li><strong>A<del>m×n</del> B<del>n×l</del> = O，则R（A）+ R（B） ≤ n.</strong></li>
+<li>设n 元齐次线性方程组<strong>A x = 0</strong>与<strong>Bx = 0</strong>同解，则<strong>R（A）= R（B）</strong>.</li>
+<li><strong>R（A^T^ A）= R（A）.</strong></li>
+</ul>
+</li>
+<li>向量组线性相关性的理论来讨论<strong>非齐次线性方程组</strong>的解.<ul>
+<li><strong>性质3：</strong>设x =η<del>1</del> 及x = η<del>2</del> 都是非齐次线性方程组对应向量方程的解，则x =η<del>1</del>-η<del>2</del> 为对应的齐次线性方程组<strong>Ax = 0</strong>的解.</li>
+<li><strong>性质4：</strong> 设x =η是非齐次线性方程组对应向量方程的解，x =ξ是齐次线性方程组对应向量方程的解，则x =ξ+η仍是非齐次线性方程组对应向量方程的解</li>
+<li>非齐次方程的通解= 对应的齐次方程的通解+非齐次方程的一个特解.</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-5-向量空间-1"><a href="#4-5-向量空间-1" class="headerlink" title="4.5 向量空间"></a>4.5 向量空间</h2><ul>
+<li><p><strong>定义6：</strong>设V 为n 维向量的集合，如果集合V 非空，且集合V 对于向量的加法及数乘两种运算封闭，那么就称集合V 为向量空间. </p>
+</li>
+<li><p>n 元齐次线性方程组的解集是一个向量空间（称为齐次线性方程组的解空间）</p>
+</li>
+<li><p>非齐次线性方程组的解集不是向量空间.</p>
+</li>
+<li><p>一般地，由向量组 a<del>1</del>，a<del>2</del>，…， a<del>m</del> 所生成的向量空间为<strong>L =｛x =λ<del>1</del> a<del>1</del> +λ<del>2</del> a<del>2</del> +… +λ<del>m</del> a<del>m</del>︳λ<del>1</del>，λ<del>2</del>，…，λ<del>m</del> ∈R ｝</strong> .</p>
+</li>
+<li><p><strong>定义7：</strong>设有向量空间V<del>1</del> 及V<del>2</del>，若V<del>1</del>⊆V<del>2</del>就称V<del>1</del> 是V<del>2</del> 的子空间.</p>
+</li>
+<li><p><strong>定义8：</strong>设V 为向量空间，如果r个向量a<del>1</del>，a<del>2</del> ， … ， a<del>r</del>∈V，且满足</p>
+<pre><code>（i） a~1~， a~2~， … ， a~r~线性无关；
+（ii） V 中任一向量都可由a~1~， a~2~， …， a~r~ 线性表示，</code></pre>
+<p>那么，向量组a<del>1</del> ，a<del>2</del> ，…， a<del>r</del> 就称为向量空间V 的一个基，r 称为向量空间V的维数，并称V为r维向量空间.</p>
+</li>
+<li><p><strong>定义9：</strong>如果在向量空间 V中取定一个基 a<del>1</del>，a<del>2</del> ， … ， a<del>r</del>，那么 V中任一向量x 可惟一地表示为x = λ<del>1</del> a<del>1</del> +λ<del>2</del> a<del>2</del> +… +λ<del>r</del> a<del>r</del>，数组λ<del>1</del>，λ<del>2</del>， …，λ<del>r</del> 称为向量量x 在基a<del>1</del>，a<del>2</del> ， … ， a<del>r</del>中的坐标.</p>
+</li>
+<li><p>自然基：取单位坐标向量组e<del>1</del>，e<del>2</del>， … ， e<del>n</del> 为基。</p>
+</li>
+<li><p>在R^3^中取定一个基<strong>a<del>1</del>,a<del>2</del>,a<del>3</del>，</strong>再取一个新基<strong>b<del>1</del>,b<del>2</del>,b<del>3</del>,**设</strong>A =（a1，a2，a3）<strong>，</strong>B=（b1，b2，b3）**.求用<strong>a<del>1</del>,a<del>2</del>,a<del>3</del>，</strong> 表示<strong>b<del>1</del>,b<del>2</del>,b<del>3</del>,</strong>,的表示式（基变换公式），并求向量在两个基中的坐标之间的关系式（坐标变换公式）.</p>
+<ul>
+<li>基变换公式为<strong>（b<del>1</del>，b<del>2</del>，b<del>3</del>）=（a<del>1</del>，a<del>2</del>，a<del>3</del>）P，</strong></li>
+<li>其中表示式的系数矩阵<strong>P=A^-1^B</strong>称为从旧基到新基的过渡矩阵.</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/14/C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%BF%9B%E9%98%B6_%E5%8C%97%E5%A4%A7/" rel="prev" title="C程序设计进阶_北大">
+      <i class="fa fa-chevron-left"></i> C程序设计进阶_北大
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/02/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1_%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6/" rel="next" title="概率论与数理统计_浙江大学">
+      概率论与数理统计_浙江大学 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">详细概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">1 行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%BA%8C%E9%98%B6%E4%B8%8E%E4%B8%89%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">1.1 二阶与三阶行列式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%85%A8%E6%8E%92%E5%88%97%E5%92%8C%E5%AF%B9%E6%8D%A2"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 全排列和对换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-n-%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.3.</span> <span class="nav-text">1.3 n 阶行列式的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">2.4.</span> <span class="nav-text">1.4 行列式的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E8%A1%8C%E5%88%97%E5%BC%8F%E6%8C%89%E8%A1%8C%EF%BC%88%E5%88%97%EF%BC%89%E5%B1%95%E5%BC%80"><span class="nav-number">2.5.</span> <span class="nav-text">1.5 行列式按行（列）展开</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E7%9F%A9%E9%98%B5%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97"><span class="nav-number">3.</span> <span class="nav-text">2 矩阵及其运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E5%92%8C%E7%9F%A9%E9%98%B5"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 线性方程组和矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 矩阵的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E9%80%86%E7%9F%A9%E9%98%B5"><span class="nav-number">3.3.</span> <span class="nav-text">2.3 逆矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E5%85%8B%E6%8B%89%E9%BB%98%E6%B3%95%E5%88%99"><span class="nav-number">3.4.</span> <span class="nav-text">2.4 克拉默法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-%E7%9F%A9%E9%98%B5%E5%88%86%E5%9D%97%E6%B3%95"><span class="nav-number">3.5.</span> <span class="nav-text">2.5 矩阵分块法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="nav-number">4.</span> <span class="nav-text">3 矩阵的初等变换与线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 矩阵的初等变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 矩阵的秩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 线性方程组的解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">4 向量组的线性相关性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E5%90%91%E9%87%8F%E7%BB%84%E5%8F%8A%E5%85%B6%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%88"><span class="nav-number">5.1.</span> <span class="nav-text">4.1 向量组及其线性组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="nav-number">5.2.</span> <span class="nav-text">4.2 向量组的线性相关性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%A7%A9"><span class="nav-number">5.3.</span> <span class="nav-text">4.3 向量组的秩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">5.4.</span> <span class="nav-text">4.4 线性方程组的解的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">5.5.</span> <span class="nav-text">4.5 向量空间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E5%8F%8A%E4%BA%8C%E6%AC%A1%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">5 相似矩阵及二次型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E5%90%91%E9%87%8F%E7%9A%84%E5%86%85%E7%A7%AF%E3%80%81%E9%95%BF%E5%BA%A6%E5%8F%8A%E6%AD%A3%E4%BA%A4%E6%80%A7"><span class="nav-number">6.1.</span> <span class="nav-text">5.1 向量的内积、长度及正交性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E8%BF%B0"><span class="nav-number">7.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E8%A1%8C%E5%88%97%E5%BC%8F-1"><span class="nav-number">8.</span> <span class="nav-text">1 行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%BA%8C%E9%98%B6%E4%B8%8E%E4%B8%89%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F-1"><span class="nav-number">8.1.</span> <span class="nav-text">1.1 二阶与三阶行列式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%85%A8%E6%8E%92%E5%88%97%E5%92%8C%E5%AF%B9%E6%8D%A2-1"><span class="nav-number">8.2.</span> <span class="nav-text">1.2 全排列和对换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-n-%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%AE%9A%E4%B9%89-1"><span class="nav-number">8.3.</span> <span class="nav-text">1.3 n 阶行列式的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E6%80%A7%E8%B4%A8-1"><span class="nav-number">8.4.</span> <span class="nav-text">1.4 行列式的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E8%A1%8C%E5%88%97%E5%BC%8F%E6%8C%89%E8%A1%8C%EF%BC%88%E5%88%97%EF%BC%89%E5%B1%95%E5%BC%80-1"><span class="nav-number">8.5.</span> <span class="nav-text">1.5 行列式按行（列）展开</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E7%9F%A9%E9%98%B5%E5%8F%8A%E5%85%B6%E8%BF%90%E7%AE%97-1"><span class="nav-number">9.</span> <span class="nav-text">2 矩阵及其运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E5%92%8C%E7%9F%A9%E9%98%B5-1"><span class="nav-number">9.1.</span> <span class="nav-text">2.1 线性方程组和矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97-1"><span class="nav-number">9.2.</span> <span class="nav-text">2.2 矩阵的运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E9%80%86%E7%9F%A9%E9%98%B5-1"><span class="nav-number">9.3.</span> <span class="nav-text">2.3 逆矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E5%85%8B%E6%8B%89%E9%BB%98%E6%B3%95%E5%88%99-1"><span class="nav-number">9.4.</span> <span class="nav-text">2.4 克拉默法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-%E7%9F%A9%E9%98%B5%E5%88%86%E5%9D%97%E6%B3%95-1"><span class="nav-number">9.5.</span> <span class="nav-text">2.5 矩阵分块法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84-1"><span class="nav-number">10.</span> <span class="nav-text">3 矩阵的初等变换与线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2-1"><span class="nav-number">10.1.</span> <span class="nav-text">3.1 矩阵的初等变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9-1"><span class="nav-number">10.2.</span> <span class="nav-text">3.2 矩阵的秩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3-1"><span class="nav-number">10.3.</span> <span class="nav-text">3.3 线性方程组的解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7-1"><span class="nav-number">11.</span> <span class="nav-text">4 向量组的线性相关性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E5%90%91%E9%87%8F%E7%BB%84%E5%8F%8A%E5%85%B6%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%88-1"><span class="nav-number">11.1.</span> <span class="nav-text">4.1 向量组及其线性组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E6%80%A7-1"><span class="nav-number">11.2.</span> <span class="nav-text">4.2 向量组的线性相关性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E5%90%91%E9%87%8F%E7%BB%84%E7%9A%84%E7%A7%A9-1"><span class="nav-number">11.3.</span> <span class="nav-text">4.3 向量组的秩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3%E7%9A%84%E7%BB%93%E6%9E%84-1"><span class="nav-number">11.4.</span> <span class="nav-text">4.4 线性方程组的解的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-1"><span class="nav-number">11.5.</span> <span class="nav-text">4.5 向量空间</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">hippo</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hippo</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
